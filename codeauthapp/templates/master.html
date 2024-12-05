@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django App</title>
+    {% load static %}
+    {% load crispy_forms_tags %}
+    <script src="{% static 'js/jquery-3.4.0.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+
+<section>
+    <nav class="navbar navbar-expand-md bg-info navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="{% url 'home-page' %}">MY ECOMMERCE</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home-page' %}">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'my_about' %}">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=" {% url 'contact us' %}">CONTACT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'shop' %}">SHOP</a>
+                </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user-registration' %}">REGISTER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user-login' %}">LOGIN</a>
+
+                    <li class="nav-item">
+                       <a class="nav-link" href="{% url 'custom-logout' %}">LOGOUT</a>
+                    <li class="nav-item">
+                        <a class="nav-link {% if navbar == 'stk' %} activated {% endif %}" href="{% url 'stk' %}">PAY</a>
+                    </li>
+
+
+                    {% if user.is_authenticated %}
+
+                    {% endif %}
+
+            </ul>
+        </div>
+    </nav>
+
+
+</section>
+
+<section>
+    {% for message in messages %}
+        <p class="text-success">{{ message }}</p>
+    {% endfor %}
+
+    {% block content %}
+
+    {% endblock %}
+
+</section>
+
+<section>
+
+ <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Nairobi,Kenya</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254743836455</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>enockkimemia5@gmail.com</p>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class=" btn-link text-white-50" href="{% url 'home-page' %}">Home</a>
+                        <a class="btn-link text-white-50" href="{% url 'my_about' %}">About Us</a>
+                        <a class="btn-link text-white-50" href="{% url 'contact us' %}">Contact Us</a>
+                        <a class=" btn-link text-white-50" href="{% url 'shop' %}">Shop</a>
+
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">My Ecommerce</a>, All Right Reserved.
+
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">enoch kimemia</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="{% url 'home-page' %}">Home</a>
+                                <a href="{% url 'my_about' %}">About</a>
+                                <a href="{% url 'contact us' %}">Contact us</a>
+                                <a href="{% url 'shop' %}">Shop</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+</section>
+
+
+</body>
+</html>

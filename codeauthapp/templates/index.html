@@ -1,0 +1,125 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-primary text-center"></h1>
+
+<!-- New Arrivals -->
+<section class="section new-arrival">
+    <script src="{% static 'js/jquery-3.4.0.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta charsept="UTF-8">
+  <div class="title">
+      <marquee behaviour="" direction="" >Shop the latest products at affordable prices</marquee>
+    <h1>PRODUCTS</h1>
+  </div>
+
+  <div class="product-center">
+    <div class="product-item">
+      <div class="overlay">
+        <a href="productDetails.html" class="product-thumb">
+          <img src="{% static 'images/product-1.jpg' %}" alt="" />
+        </a>
+      </div>
+      <div class="product-info">
+        <a href="productDetails.html">SHIRT</a>
+        <h4>700</h4>
+      </div>
+
+    </div>
+    <div class="product-item">
+      <div class="overlay">
+        <a href="#" class="product-thumb">
+          <img src="{% static 'images/product-3.jpg' %}" alt="" />
+        </a>
+        <span class="discount"></span>
+      </div>
+      <div class="product-info">
+        <span></span>
+        <a href="#">SWEATER</a>
+        <h4>800</h4>
+      </div>
+
+    </div>
+    <div class="product-item">
+      <div class="overlay">
+        <a href="#" class="product-thumb">
+          <img src="{% static 'images/product-2.jpg' %}" alt="" />
+        </a>
+      </div>
+      <div class="product-info">
+        <span></span>
+        <a href="#">BAG</a>
+        <h4>1500</h4>
+      </div>
+
+    </div>
+    <div class="product-item">
+      <div class="overlay">
+        <a href="#" class="product-thumb">
+          <img src="{% static 'images/product-4.jpg' %}" alt="" />
+        </a>
+        <span class="discount"></span>
+      </div>
+      <div class="product-info">
+        <a href="#">HOODIE</a>
+        <h4>900</h4>
+      </div>
+
+    </div>
+    <div class="product-item">
+      <div class="overlay">
+        <a href="#" class="product-thumb">
+          <img src="{% static 'images/product-5.jpg' %}" alt="" />
+        </a>
+      </div>
+      <div class="product-info">
+        <a href="#">HOODIE</a>
+        <h4>1000</h4>
+      </div>
+
+    </div>
+    <div class="product-item">
+      <div class="overlay">
+        <a href="#" class="product-thumb">
+          <img src="{% static 'images/product-6.jpg' %}" alt="" />
+        </a>
+      </div>
+      <div class="product-info">
+        <a href="#">SHIRT</a>
+        <h4>500</h4>
+      </div>
+
+    </div>
+    <div class="product-item">
+      <div class="overlay">
+        <a href="#" class="product-thumb">
+          <img src="{% static 'images/product-7.jpg' %}" alt="" />
+        </a>
+        <span class="discount"></span>
+      </div>
+      <div class="product-info">
+        <a href="#">SHIRT</a>
+        <h4>200</h4>
+      </div>
+
+    </div>
+    <div class="product-item">
+      <div class="overlay">
+        <a href="#" class="product-thumb">
+          <img src="{% static 'images/product-2.jpg' %}" alt="" />
+        </a>
+      </div>
+      <div class="product-info">
+{#        <span>BAG</span>#}
+        <a href="#">BAG</a>
+        <h4>560</h4>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+{% endblock %}
